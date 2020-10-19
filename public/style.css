@@ -1,0 +1,105 @@
+/* Layout */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.clockbox {
+    border-radius: .6em;
+    box-shadow: 2px 2px 12px rgba(243, 239, 239, 0.4);
+    background-image: linear-gradient(to right, #2b0404 0%, rgb(240, 61, 61) 100%);
+}
+
+.heading {
+    padding: .6em 0 .5em 0;
+    font-weight: 200;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 12px rgba(243, 239, 239, 0.4);
+}
+
+.main {
+    display: flex;
+    padding: 2em;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 12px rgba(243, 239, 239, 0.4);
+}
+
+.clockbox,
+#clock {
+    width: 100%;
+}
+
+
+/* Clock styles */
+
+.circle {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #FFFFFF;
+}
+
+.hour-marks {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+
+/* Transparent box ensuring arms center properly. */
+
+.sizing-box {
+    fill: none;
+}
+
+
+/* Make all arms rotate around the same center point. */
+
+
+/* Optional: Use transition for animation. */
+
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    transition: transform .5s ease-in-out;
+}
